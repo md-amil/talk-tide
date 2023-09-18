@@ -1,0 +1,10 @@
+GET http://localhost:3000/conversations
+Authorization: Bearer 1058824|yF9Vhc5nJSz0Fjw1hCgoYbsk9ITggbB6SENcDx9G
+###
+
+POST http://localhost:3000/conversations
+Content-Type: application/json
+
+{
+    "name":"amil ali sahil"
+}
