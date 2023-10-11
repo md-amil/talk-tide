@@ -1,39 +1,17 @@
 import { Request, Response } from "express";
+import { MessageModal } from "../models";
 
 export async function get(req: Request, res: Response) {
-   return res.json( [
-      {
-         name:"amil",
-         age :20,
-         lastMessage:"hello"
-      },
-      {
-         name:"amil",
-         age :20,
-         lastMessage:"hello"
-      },
-      {
-         name:"amil",
-         age :20,
-         lastMessage:"hello"
-      },
-      {
-         name:"amil",
-         age :20,
-         lastMessage:"hello"
-      },
-      {
-         name:"amil",
-         age :20,
-         lastMessage:"hello"
-      }
-   ]);
+   const messages =  await MessageModal.find()
+   return res.json(messages)
 }
 export async function show(req: Request, res: Response) {
    return  res.send("okey");
 }
 export async function store(req: Request, res: Response) {
-   return  res.send("okey");
+   const message = new MessageModal(req.body)
+   message.save()
+   return res.send(message)
 }
 export async function update(req: Request, res: Response) {
    return  res.send("okey");

@@ -1,7 +1,15 @@
 import { Router } from "express";
-const routes = Router()
+const routes = Router();
 import conversationRouter from "./conversation.route";
+import messageRouter from "./message.route";
+import userRouter from './user.route'
+import postRouter from './post.route'
 
-routes.use('/conversations',conversationRouter)
-// routes.get("/apple",(req,res)=>res.send("apple routes"))
-export default routes
+
+
+routes.use("/conversations", conversationRouter);
+routes.use("/messages", messageRouter);
+routes.use("/users", userRouter);
+routes.use("/posts", postRouter);
+
+export default routes;

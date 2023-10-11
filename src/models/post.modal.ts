@@ -1,13 +1,13 @@
 import mongoose, { Schema } from "mongoose";
 
 const messageSchema = new Schema({
-  text   : {
+  title:{
     type: String,
-    required: true,
     default: "",
   },
-  conversationId: {
-    type: Schema.Types.ObjectId,
+  text:{
+    type: String,
+    default: "",
   },
   userId:{
     type : Schema.Types.ObjectId,
@@ -22,5 +22,5 @@ const messageSchema = new Schema({
 // videoSchema.methods.findBucket = function (cb: any) {
 //     return cred.findById(this.bucket_id);
 // };
-const MessageModal= mongoose.model("Message", messageSchema);
-export default MessageModal
+const PostModal= mongoose.model("Post", messageSchema);
+export default PostModal
