@@ -6,7 +6,7 @@ import userRouter from './user.route'
 import postRouter from './post.route'
 
 
-
+routes.get('/',(req,res)=>res.send("working"))
 routes.use("/conversations", conversationRouter);
 routes.use("/messages", messageRouter);
 routes.use("/users", userRouter);

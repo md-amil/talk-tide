@@ -16,9 +16,8 @@ const conversationSchema = new mongoose.Schema({
     }
 })
 
-// videoSchema.methods.findBucket = function (cb: any) {
-//     return cred.findById(this.bucket_id);
-// };
+
+
 const conversationModal = mongoose.model("Conversation", conversationSchema);
 export default conversationModal
 

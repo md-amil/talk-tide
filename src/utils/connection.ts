@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 import { conversationController } from "../controllers";
   mongoose.Promise = global.Promise;
 
-const mongoURI = "mongodb://localhost:27017/talkTide";
+const mongoURI = "mongodb://localhost:27018/talkTide";
 mongoose
   .connect(mongoURI, {
     // useNewUrlParser: true,

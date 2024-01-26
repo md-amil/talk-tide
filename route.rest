@@ -2,12 +2,26 @@ GET http://localhost:3000/conversations
 Authorization: Bearer 1058824|yF9Vhc5nJSz0Fjw1hCgoYbsk9ITggbB6SENcDx9G
 ###
 
-POST http://localhost:3000/conversations
+POST http://localhost:3000/conversations    
 Content-Type: application/json
+
 {
-    "name":"amil ali sahil"
+    "name":"hello world"
+}
+
+###
+
+PUT http://localhost:3000/conversations/65b3dd43022501175d124507
+Content-Type: application/json
+
+{
+    "name":"hello world"
 }
 ###
+
+DELETE http://localhost:3000/conversations/65b3dd43022501175d124507
+###
+
 GET http://localhost:3000/messages
 
 ###
@@ -37,3 +51,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Im5hbWUiO
     "title":"Friend",
     "text":"hello dear",
 }
+
+
+###
+GET http://localhost:3000/posts
