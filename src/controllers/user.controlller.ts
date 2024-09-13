@@ -24,7 +24,7 @@ export async function get(req: Request, res: Response) {
     const characterName: string = uniqueNamesGenerator(config);
     const user = new UserModal({name:characterName,...req.body})
     user.save()
-    let token = jwt.sign({ user: user }, 'secret-key');
+    let token = jwt.sign({  }, 'secret-key');
     const {name,_id,createdAt} = user
     return res.json({_id,name,createdAt,token})
  }

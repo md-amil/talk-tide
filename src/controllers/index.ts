@@ -1,11 +1,5 @@
-import * as  conversationController from './conversation.controller'
-import * as messageController from './message.controller'
-import * as userControllers from './user.controlller'
-import * as postControllers from './post.controller'
+export * as conversationController from "./conversation.controller";
+export * as messageController from "./message.controller";
+export * as userControllers from "./user.controlller";
+export * as postControllers from "./post.controller";
 
-export {
-    conversationController,
-    messageController,
-    userControllers,
-    postControllers
-}

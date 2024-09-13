@@ -19,5 +19,5 @@ const conversationSchema = new mongoose.Schema({
 
 
 const conversationModal = mongoose.model("Conversation", conversationSchema);
-export default conversationModal
+export default   conversationModal
 
